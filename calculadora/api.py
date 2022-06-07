@@ -2,20 +2,28 @@ from fastapi import APIRouter, HTTPException, status
 
 calculadora = APIRouter(tags=["Calculadora"])
 
+# Endpoint para adição
+
 
 @calculadora.get("/adicao")
 def somar(numero1: int, numero2: int):
     return numero1 + numero2
+
+# Endpoint para subtração
 
 
 @calculadora.get("/subtracao")
 def subtrair(numero1: int, numero2: int):
     return numero1 - numero2
 
+# Endpoint para multiplicação
+
 
 @calculadora.get("/multiplicacao")
 def multiplicar(numero1: int, numero2: int):
     return numero1 * numero2
+
+# Endpoint para divisão
 
 
 @calculadora.get("/divisao")
@@ -25,6 +33,8 @@ def dividir(numero1: int, numero2: int):
                             detail="Não é possível dividir por zero")
     return numero1 / numero2
 
+# Endpoint para raiz
+
 
 @calculadora.get("/raiz")
 def raiz(numero: int):
@@ -33,10 +43,14 @@ def raiz(numero: int):
                             detail="Não é possível calcular a raiz de número negativo")
     return numero ** (1/2)
 
+# Endpoint para potência
+
 
 @calculadora.get("/potencia")
 def potencia(numero1: int, numero2: int):
     return numero1 ** numero2
+
+# Endpoint para fatorial
 
 
 @calculadora.get("/fatorial")
