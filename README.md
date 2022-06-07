@@ -34,6 +34,10 @@ O servidor estará disponível em:
 http://localhost:8000
 ```
 
+Para rodas os testes
+```
+pytest
+```
 ## Rotas
 
 Todas as rotas estão disponíveis nas urls:  /docs ou /redoc, com Swagger or ReDoc.
